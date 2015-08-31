@@ -9,7 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-            
+
             <script type="text/javascript" src="jquery-1.4.1.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <script type="text/javascript">
@@ -29,19 +29,19 @@ and open the template in the editor.
                          success: function(result){ // if ajax function results success
                          var result=trim(result);
                          
-                         if(result=='correct'){ //if result correct, go home page
-                              window.location='home.php';
-                         }else{  //if result incorrect, print error message
-                              $("#errorMessage").html(result);
-                         }
-                    }
-              });
-            }
+                            if(result=='correct'){ //if result correct, go home page
+                                window.location='home.php';
+                            }else{  //if result incorrect, print error message
+                                $("#errorMessage").html(result);
+                            }
+                        }
+                    });
+                }
 
-            function trim(str){
-            var str=str.replace(/^\s+|\s+$/,'');
-            return str;
-            }
+                function trim(str){
+                    var str=str.replace(/^\s+|\s+$/,'');
+                    return str;
+                }
             </script>
         </head>
     <body>
@@ -50,16 +50,15 @@ and open the template in the editor.
         
         <div class="container">
             <h1 >Login Form</h1>
-            
-            <div  class="login">
+            <div  class="login-box">
                 <form method="post" action="">
                     
-                    <div class="errorMessage"id="errorMessage"></div>
+                    <div class="alert-danger"id="errorMessage"></div>
                
                     <div class="form-group">
-                        <label for="inputEmail">User Name</label>
+                        <label for="inputUsername">User Name</label>
                         <input type="text" name="uname" id="uname" class="form-control" placeholder="User Name">
-                        </div> 
+                    </div> 
                 
                        
                         
@@ -70,7 +69,7 @@ and open the template in the editor.
                     
                    
                     <div> 
-                        <input type="button" name="submit" value="Submit" class="btn btn-default" onclick="validLogin()">
+                        <input type="button" nambuttone="submit" value="Submit" class="btn btn-default" onclick="validLogin()">
                     </div>
                 
                 </form>
